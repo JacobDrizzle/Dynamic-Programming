@@ -7,6 +7,36 @@ import java.util.Map;
 
 public class main {
 
+    /* 
+	EXPONENTIAL TIME COMPLEXITY
+	
+	public static int minChange(int amount, List<Integer> coins) {
+		if(amount == 0) {
+			return 0;
+		}
+		
+		if(amount < 0) {
+			return -1;
+		}
+		
+		int minCoins = -1;
+		
+		for(int coin : coins) {
+			int subAmount = amount - coin;
+			System.out.println("Calling minChange(" + subAmount + ", " + coins + ")");
+			int subCoins = minChange(subAmount, coins);
+			if(subCoins != -1) {
+				int numCoins = subCoins + 1;
+				if(numCoins < minCoins || minCoins == -1) {
+					minCoins = numCoins;
+				}
+			}
+		}
+		
+		return minCoins;
+	}
+	*/
+
     // Use a HashMap for memoization to store the minimum number of coins for given amounts
     private static Map<Long, Long> memo = new HashMap<>();
     
